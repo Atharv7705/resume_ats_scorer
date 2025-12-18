@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Resume ATS Scorer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h2>Resume ATS Scorer</h2>
+
+    <input type="file" id="resume">
+    <textarea id="jd" placeholder="Paste Job Description"></textarea>
+
+    <button onclick="analyze()">Analyze</button>
+
+    <div id="loading" style="display: none;">Analyzing your resume...</div>
+    <pre id="result"></pre>
+
+    <script src="script.js"></script>
+</body>
+</html>
