@@ -69,7 +69,7 @@ resume_ats_scorer/
 └── README.md
 
 # 1️⃣ Clone the Repository
-git clone https://github.com/<your-username>/resume_ats_scorer.git
+git clone [https://github.com/<your-username>/resume_ats_scorer.git](https://github.com/Atharv7705/resume_ats_scorer.git)
 cd resume_ats_scorer/backend
 
 # 2️⃣ Create a Virtual Environment (optional)
@@ -100,3 +100,4 @@ uvicorn main:app --reload
 # 6️⃣ Run Frontend
 # Simply open the file below in your browser:
 # ../frontend/index.html
+
