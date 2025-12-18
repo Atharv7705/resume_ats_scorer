@@ -1,88 +1,102 @@
-\# Resume ATS Scorer
+# 📄 Resume ATS Scorer
 
+A machine learning–powered tool that analyzes resumes, compares them with a job description, and generates an ATS (Applicant Tracking System) score along with missing skills, strengths, and improvement suggestions.
 
+---
 
-\## Description
+## ✨ Features
+- Extracts resume text (PDF) using OCR-free parsing  
+- Matches resume content with job description  
+- Calculates ATS score using **TF-IDF + Cosine Similarity**  
+- Detects missing skills  
+- Highlights strengths  
+- Generates improvement suggestions  
+- Clean HTML/CSS/JS frontend  
+- FastAPI backend API  
 
-An Applicant Tracking System (ATS) Resume Scorer that analyzes a resume
+---
 
-against a job description using NLP and Machine Learning.
+## 🛠 Tech Stack
 
+### 🎨 Frontend
+- HTML  
+- CSS  
+- JavaScript (Fetch API)
 
+### ⚙️ Backend
+- Python  
+- FastAPI  
+- Uvicorn  
 
-\## Features
+### 🧠 Machine Learning / NLP
+- TF-IDF Vectorizer  
+- Cosine Similarity  
+- PyPDF2  
+- spaCy (optional)  
 
-\- ATS Score calculation
+### 🗄 Database
+- SQLite (stores scoring logs)
 
-\- Missing skills detection
+---
 
-\- Strength summary
+## 📁 Project Structure
+resume_ats_scorer/
+│
+├── backend/
 
-\- Resume improvement suggestions
+│ ├── main.py
 
+│ ├── ats_logic.py
 
+│ ├── resume_parser.py
 
-\## Tech Stack
+│ ├── database.py
 
-\- Frontend: HTML, CSS, JavaScript
+│ └── skills.csv
 
-\- Backend: Python, FastAPI
+│
 
-\- ML: TF-IDF, Cosine Similarity
+├── frontend/
 
-\- Database: SQLite
+│ ├── index.html
 
+│ ├── style.css
 
+│ └── script.js
 
-\## Setup Instructions
+│
 
-1\. Clone repository
+└── README.md
 
-2\. Install dependencies
+# 1️⃣ Clone the Repository
+git clone https://github.com/<your-username>/resume_ats_scorer.git
+cd resume_ats_scorer/backend
 
-&nbsp;  pip install -r requirements.txt
+# 2️⃣ Create a Virtual Environment (optional)
+python -m venv venv
 
-3\. Run backend
+# Activate Virtual Environment
+# Windows:
+venv\Scripts\activate
+# Mac/Linux:
+# source venv/bin/activate
 
-&nbsp;  uvicorn main:app --reload
+# 3️⃣ Install Dependencies
+pip install fastapi uvicorn scikit-learn PyPDF2 python-multipart spacy
 
-4\. Open frontend/index.html
+# Download spaCy model (optional but recommended)
+python -m spacy download en_core_web_sm
 
+# 4️⃣ Initialize Database
+python database.py
 
+# 5️⃣ Start Backend Server
+uvicorn main:app --reload
 
-\## API Endpoint
+# Backend now runs at:
+# http://127.0.0.1:8000
+# http://127.0.0.1:8000/docs  (Swagger API Docs)
 
-POST /analyze
-
-\- resume (PDF file)
-
-\- job\_description (text)
-
-
-
-\## Database Schema
-
-Table: results
-
-\- id (INTEGER)
-
-\- score (INTEGER)
-
-\- missing\_skills (TEXT)
-
-\- strengths (TEXT)
-
-
-
-\## Future Enhancements
-
-\- Deep learning embeddings (BERT)
-
-\- Resume ranking
-
-\- Authentication
-
-\- Cloud deployment
-
-
-
+# 6️⃣ Run Frontend
+# Simply open the file below in your browser:
+# ../frontend/index.html
